@@ -37,7 +37,7 @@ testset
 
 
 # convert an array of values into a dataset matrix
-def create_dataset(dataset, look_back=54):
+def create_dataset(dataset, look_back=1):
 	dataX, dataY = [], []
 	for i in range(len(dataset)-look_back-1):
 		a = dataset[i:(i+look_back), 0]
@@ -58,7 +58,7 @@ train.shape
 test.shape
 print(test.shape)
 # reshape into X=t and Y=t+1
-look_back = 1
+look_back = 1440
 trainX, trainY = create_dataset(train, look_back)
 trainX.shape
 trainY.shape
