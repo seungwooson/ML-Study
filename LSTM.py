@@ -21,7 +21,6 @@ from patsy import dmatrices
 
 filename = "./LSTM/bitcoin_ticker.csv"
 
-#UK Sellout data including average sales price and quantity sold
 df = pd.read_csv(filename)
 df = df[df["market"]=="bitstamp"]
 df = df[df["rpt_key"]=="btc_usd"]
